@@ -26,7 +26,7 @@ export interface User extends Document {
   isVerified: boolean;
   verifyCodeExpiry: Date;
   isAcceptingMessage: boolean;
-  message: Message[];
+  messages: Message[];
 }
 
 const UserSchema: Schema<User> = new Schema({
@@ -61,7 +61,7 @@ const UserSchema: Schema<User> = new Schema({
     type: Boolean,
     default: true,
   },
-  message: [MessageSchema],
+  messages: [MessageSchema],
 });
 
 // there is a catch while exporting this schema in next js due to this will run at the edge, they don't have idea about weather this application is running first time or it is boot up earlier. so we have to take care while exporting.
