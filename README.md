@@ -45,4 +45,9 @@ in the credential based sign-in we are hard-coded callbacks options for example 
 Next-Auth Options: 
 problem while importing nextAuthOptions, problem due to older-version of next-auth so i install next-auth@4
 
+Avoid using special character in mongodb connection string password
 
+External library used or API used:-
+
+Resend = https://resend.com/onboarding
+Gemini api key = https://aistudio.google.com/projects?
