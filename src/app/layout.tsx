@@ -4,6 +4,8 @@ import "./globals.css";
 
 import AuthProvider from "@/context/AuthProvider";
 import { Toaster } from "@/components/ui/sonner";
+import Navbar from "@/components/ui/navbar";
+
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -31,12 +33,13 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
       suppressHydrationWarning
     >
-      <body className="min-h-screen flex flex-col">
         <AuthProvider>
-          {children}
-          <Toaster richColors position="top-right" />
+            <body className="min-h-screen flex flex-col">
+                <Navbar />
+                {children}
+                <Toaster richColors position="top-right" />
+            </body>
         </AuthProvider>
-      </body>
     </html>
   );
 }
