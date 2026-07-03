@@ -1,7 +1,7 @@
-import mongoose, { Schema, Document, Mongoose } from "mongoose";
-import { unique } from "next/dist/build/utils";
+import mongoose, { Schema, Document, Mongoose, Types } from "mongoose";
 
 export interface Message extends Document {
+  _id: Types.ObjectId;
   content: string;
   createdAt: Date;
 }
